@@ -221,10 +221,10 @@ def spawn_enemies(enemies, difficulty):
         random.randint(LINE_Y + LINE_HEIGHT, HEIGHT - ENEMY_HEIGHT), ENEMY_WIDTH, ENEMY_HEIGHT)
         enemies.append(enemy)
 
-def enemies_bullets(enemies, difficulty, enemies_bullets):
+def enemies_bullets(enemies, difficulty, enemies_bullets): #SPAWN ENEMIES' BULLETS
 
     for enemy in enemies:
-        if random.randint(1, difficulty) == 1 and len(enemies_bullets) < MAX_ENEMY_BULLETS:
+        if random.randint(1, difficulty) == 1 and len(enemies_bullets) < MAX_ENEMY_BULLETS: 
             enemy_bullet_sound.play()
             enemy_bullet = pygame.Rect(enemy.x, enemy.y + ENEMY_HEIGHT/2 - 2,
                         ENEMY_BULLET_WIDTH, ENEMY_BULLET_HEIGHT)
